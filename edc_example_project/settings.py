@@ -37,13 +37,17 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_js_reverse',
+    'crispy_forms',
     'django_crypto_fields.apps.AppConfig',
+    'django_revision.apps.AppConfig',
     'edc_appointment.apps.AppConfig',
     'edc_base.apps.AppConfig',
     'edc_call_manager.apps.AppConfig',
     'edc_label.apps.AppConfig',
     'edc_visit_schedule.apps.AppConfig',
-    'edc_netadata.apps.AppConfig',
+    'edc_metadata.apps.AppConfig',
+    'edc_visit_tracking.apps.AppConfig',
     'edc_registration.apps.AppConfig',
     'edc_example.apps.EdcProtocolAppConfig',
     'edc_example.apps.EdcTimepointAppConfig',
@@ -135,3 +139,4 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 GIT_DIR = BASE_DIR
 KEY_PATH = os.path.join(BASE_DIR, 'crypto_fields')
 ETC_DIR = os.path.join(BASE_DIR, 'etc')
+CRISPY_TEMPLATE_PACK = 'bootstrap3'

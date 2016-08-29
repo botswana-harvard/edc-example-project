@@ -20,18 +20,14 @@
             </a>
             <ul class="dropdown-menu">
               <li class="dropdown-header">Subjects</li>
-              <li><a id="link-maternal" href="{% url 'section_url' 'maternal' %}">Maternal</a></li>
-              <li><a id="link-infant" href="{% url 'section_url' 'infant' %}">Infant</a></li>
+              <li><a id="link-maternal" href="#">Research Subjects</a></li>
           </ul>
           </li>
-          <li><a id="pill-call-manager" href="{% url 'admin:call_manager_call_changelist' %}">Call Subjects
+          <li><a id="pill-call-manager" href="{% url 'edc_call_manager_admin:edc_call_manager_call_changelist' %}">Call Subjects
                 <span class="glyphicon glyphicon-earphone pull-right" aria-hidden="true"></span>
           </a></li>
-          <li><a id="link-verify-consent-subjects" href="{% url 'admin:td_maternal_maternalconsent_changelist' %}">Verify Consents
+          <li><a id="link-verify-consent-subjects" href="{% url 'edc_example_project_admin:edc_example_subjectconsent_changelist' %}">Verify Consents
                 <!--<span id="bdg-consent-verified" class="badge pull-right"></span>-->
-          </a></li>
-          <li role="presentation"><a id="link-pending-transactions" href="#">Manage transactions
-                <!--<span id="bdg-pending-transactions" class="badge pull-right"></span></a>-->
           </a></li>
           <li><a id="pill-labelling" href="{% url 'edc-label:home_url' %}">Labelling
                 <span class="glyphicon glyphicon-barcode pull-right" aria-hidden="true"></span>

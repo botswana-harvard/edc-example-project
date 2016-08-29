@@ -16,6 +16,10 @@ class AppConfig(DjangoAppConfig):
 
 class EdcProtocolAppConfig(EdcProtocolAppConfigParent):
     enrollment_caps = {'edc_example.enrollment': ('subject', -1)}  # {label_lower: (key, count)}
+    protocol = 'BHPEDC'
+    protocol_number = '000'
+    protocol_name = 'Example Edc Project'
+    protocol_title = 'Example Project to Display Edc Modules'
 
 
 class EdcConsentAppConfig(EdcConsentAppConfigParent):
