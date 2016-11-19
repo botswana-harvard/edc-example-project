@@ -1,13 +1,13 @@
 from dateutil.relativedelta import relativedelta
+
 from django.apps.config import AppConfig as DjangoAppConfig
 from django.utils import timezone
 
 from edc_consent.apps import AppConfig as EdcConsentAppConfigParent
 from edc_consent.consent_config import ConsentConfig
+from edc_protocol.apps import AppConfig as EdcProtocolAppConfigParent
 from edc_timepoint.apps import AppConfig as EdcTimepointAppConfigParent
 from edc_timepoint.timepoint import Timepoint
-from edc_visit_schedule.apps import AppConfig as EdcVisitScheduleAppConfigParent
-from edc_protocol.apps import AppConfig as EdcProtocolAppConfigParent
 
 
 class AppConfig(DjangoAppConfig):
@@ -16,10 +16,6 @@ class AppConfig(DjangoAppConfig):
 
 class EdcProtocolAppConfig(EdcProtocolAppConfigParent):
     enrollment_caps = {'edc_example.enrollment': ('subject', -1)}  # {label_lower: (key, count)}
-    protocol = 'BHPEDC'
-    protocol_number = '000'
-    protocol_name = 'Example Edc Project'
-    protocol_title = 'Example Project to Display Edc Modules'
 
 
 class EdcConsentAppConfig(EdcConsentAppConfigParent):
