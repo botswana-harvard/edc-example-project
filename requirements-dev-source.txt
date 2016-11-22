@@ -18,3 +18,4 @@
 -e /Users/erikvw/source/edc-lab
 -e /Users/erikvw/source/edc-identifier
 -e /Users/erikvw/source/edc-device
+-e /Users/erikvw/source/edc-label
