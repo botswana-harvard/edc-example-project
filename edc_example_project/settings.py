@@ -43,19 +43,17 @@ INSTALLED_APPS = [
     'django_revision.apps.AppConfig',
     'edc_appointment.apps.AppConfig',
     'edc_base.apps.AppConfig',
-    'edc_call_manager.apps.AppConfig',
+    # 'edc_call_manager.apps.AppConfig',
     'edc_device.apps.AppConfig',
     'edc_identifier.apps.AppConfig',
-    'edc_example.apps.AppConfig',
-    'edc_example.apps.EdcConsentAppConfig',
-    'edc_example.apps.EdcProtocolAppConfig',
-    'edc_example.apps.EdcTimepointAppConfig',
-    'edc_example_project.apps.AppConfig',
-    'edc_label.apps.AppConfig',
     'edc_metadata.apps.AppConfig',
     'edc_registration.apps.AppConfig',
     'edc_visit_schedule.apps.AppConfig',
     'edc_visit_tracking.apps.AppConfig',
+    'edc_example.apps.EdcProtocolAppConfig',
+    'edc_example.apps.EdcTimepointAppConfig',
+    'edc_example.apps.EdcConsentAppConfig',
+    'edc_example.apps.AppConfig',
 ]
 
 MIDDLEWARE = [
@@ -92,10 +90,22 @@ WSGI_APPLICATION = 'edc_example_project.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'OPTIONS': {
+            'read_default_file': os.path.join(BASE_DIR, 'etc', 'default.cnf'),
+        },
+        'HOST': '',
+        'PORT': '',
+        'ATOMIC_REQUESTS': True,
     }
 }
 
